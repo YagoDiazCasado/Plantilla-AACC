@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Configuración de la base de datos -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://10.11.106.103:3306/xxxx</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">mysql_123</property>
+
+		<!-- Dialecto de Hibernate -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+		<!-- Mostrar las consultas SQL en la consola -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+
+		<!-- Opciones de manejo de la base de datos -->
+		<property name="hibernate.hbm2ddl.auto">none</property>
+
+		<!-- Especificar objetos mapeados -->
+		<mapping class="com.aadd.ydc.vo.ClasePersistencia" />
+	</session-factory>
+</hibernate-configuration>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">-->
+<!--<hibernate-configuration>-->
+<!--	<session-factory>-->
+<!--		 Configuración de la base de datos -->
+<!--		<property name="hibernate.connection.driver_class">-->
+<!--			org.postgresql.Driver</property>-->
+<!--		<property name="hibernate.connection.url">-->
+<!--			jdbc:postgresql://10.11.106.103:5432/xxxx</property>-->
+<!--		<property name="hibernate.connection.username">inm</property>-->
+<!--		<property name="hibernate.connection.password">postgresql123</property>-->
+
+<!--		 Dialecto de Hibernate -->
+<!--		<property name="hibernate.dialect">-->
+<!--			org.hibernate.dialect.PostgreSQLDialect</property>-->
+
+<!--		 Mostrar las consultas SQL en la consola -->
+<!--		<property name="hibernate.show_sql">true</property>-->
+<!--		<property name="hibernate.format_sql">true</property>-->
+
+<!--		 Opciones de manejo de la base de datos -->
+<!--		<property name="hibernate.hbm2ddl.auto">create-drop</property>-->
+
+<!--		 Especificar objetos mapeados -->
+<!--		<mapping class="com.aadd.ydc.vo.ClasePersistencia" />-->
+<!--	</session-factory>-->
+<!--</hibernate-configuration>-->
+

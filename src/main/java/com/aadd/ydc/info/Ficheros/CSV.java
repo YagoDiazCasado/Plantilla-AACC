@@ -1,0 +1,17 @@
+package com.aadd.ydc.info.Ficheros;
+
+public class CSV {
+
+////////////////////////////////////////////////////////////// Guardar EN CSV  /////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public static void main(String[] args) {
+
+		// Se leen como ficheros normales separados por comas
+		// Se escriben como ficheros normales separados por comas
+
+		// Puedes usar Writer, FileWriter,BufferedFileWriter, o lo que quieras.
+		// Asegurate par ano sobreescribir de que si usas fileWriter esté el parametro 2
+		// en true
+
+	}
+}

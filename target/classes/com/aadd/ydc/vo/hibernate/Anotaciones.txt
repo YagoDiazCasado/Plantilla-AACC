@@ -1,0 +1,34 @@
+Anotaciones hibernate:
+
+Estaria bien hacer consctructores vacios y con parametros en cada vo
+
+@Entity para declarar la clase como tabla
+@Table(name = "NOMBRE_EN_LA_BBDD") para ponerle el nombre, sino le pondra el de la clase de java
+
+@Column(name = "nombre_Columna", columnDefinition = "tipo que se quiere"(opcional))           aqui con el nom de la bbdd
+@JoinColumn(...) para las claves foráneas.
+
+@OneToOne   Son anotaciones que deben ir encima de una clave foránea.
+@OneToMany
+@ManyToOne
+@ManyToOne(cascade = CascadeType.PERSIST) // esto hace que si no existen, se creen solas
+
+@Id  Esto para declararlo como pk
+@GeneratedValue(Strategy = GenerationType.IDENTITY)  Esto es para el id autoincremental
+
+@EmbeddedId  En el caso de que al clave primaria sea compuesta.
+Esta anotacion va encima del objeto "compositeID" que creamos dentro de la clase
+@Embeddable  es lo que se pone encima de la subclase que combina las dos claves.
+
+@Lob  encima de un atributo Byte[], lo convierte a Blob para la BBDD
+Si lo crea como tinyBlob, especifica con el columnDefinition = "BLOB"
+
+En postgre se utiliza BYTEA
+Se guarda como un binary Stream
+
+
+
+Para meter tablas de relacion, meter primero las partes y luego la relacion a la bbdd
+
+
+

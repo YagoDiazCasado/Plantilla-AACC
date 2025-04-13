@@ -1,0 +1,9 @@
+Anotaciones json:
+
+@JsonPrperty("nombre del atributo")
+
+@JsonIgnore
+
+@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") define el formato de las fechas (tener cuidado que coincida con el gestor de fechas que tenemos)
+
+@JsonIgnoreProperties(ignoreUnknown = true) Esto va encima de la clase. Hace que los atributos que desconozca sean ignorados en la deserializacion
