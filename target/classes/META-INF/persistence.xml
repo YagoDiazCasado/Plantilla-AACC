@@ -17,10 +17,10 @@
 			<property name="jakarta.persistence.jdbc.driver"
 				value="com.mysql.cj.jdbc.Driver" />
 			<property name="jakarta.persistence.jdbc.url"
-				value="jdbc:mysql://10.11.106.103:3306/base" />
+				value="jdbc:mysql://x.x.x.x:3306/base" />
 			<property name="jakarta.persistence.jdbc.user" value="root" />
 			<property name="jakarta.persistence.jdbc.password"
-				value="mysql_123" />
+				value="xxxxx" />
 
 			<!-- Otras propiedades -->
 			<property
@@ -42,10 +42,10 @@
 			<property name="jakarta.persistence.jdbc.driver"
 				value="org.postgresql.Driver" />
 			<property name="jakarta.persistence.jdbc.url"
-				value="jdbc:postgresql://10.11.106.103:5432/xxxx" />
+				value="jdbc:postgresql://x.x.x.x:5432/xxxx" />
 			<property name="jakarta.persistence.jdbc.user" value="root" />
 			<property name="jakarta.persistence.jdbc.password"
-				value="postgresql123" />
+				value="xxxx" />
 
 			<!-- Dialecto para PostgreSQL -->
 			<property name="hibernate.dialect"
@@ -72,7 +72,7 @@
 			<!-- Para encender:  -->
 			<!-- objectDb > jakarta > cmd > java -cp objectdb.jar com.objectdb.Server-->
 			<property name="jakarta.persistence.jdbc.url"
-				value="objectdb://localhost:6136/base.odb" />
+				value="objectdb://x.x.x.x:6136/base.odb" />
 			<!-- Opcional: Logging y configuración adicional -->
 			<property name="jakarta.persistence.jdbc.user" value="admin" />
 			<property name="jakarta.persistence.jdbc.password"
