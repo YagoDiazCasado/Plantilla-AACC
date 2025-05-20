@@ -1,0 +1,31 @@
+📄 CONFIGURACIÓN DEL SERVIDOR SPRING BOOT PARA ACCESO REMOTO
+
+✅ Requisitos previos
+- Tener instalado y funcionando un proyecto Spring Boot.
+- Conexión a internet estable.
+- Conocimiento del puerto que se va a utilizar.
+- Configuración del router (si se accede desde fuera de la red local).
+
+⚙️ Configuración básica (application.properties)
+server.port=8274
+spring.web.cors.allowed-origins=*
+spring.web.cors.allowed-methods=GET,POST,PUT,DELETE
+
+🔐 Configuración del sistema
+1. Abrir el puerto en el firewall:
+   - Permitir tráfico TCP en el puerto 8274 (o el que se haya configurado).
+2. Redirigir el puerto en el router (NAT/port forwarding):
+   - Puerto externo 8274 → IP local del servidor, puerto 8274.
+
+⚠️ Posibles errores y peligros
+- Puerto ocupado: el puerto ya lo usa otra aplicación → cambia el número o cierra la app conflictiva.
+- Firewall bloquea: no se puede acceder desde fuera → abrir el puerto TCP en reglas del firewall.
+- Router sin redirección: accesible solo en LAN → configurar NAT para permitir acceso externo.
+- No IP fija: usar servicios tipo No-IP o DuckDNS si la IP pública cambia.
+- Seguridad: el servidor estará expuesto → no uses allowed-origins=* en producción.
+
+🧪 Verificación
+- Acceder desde otro dispositivo:
+  http://<IP_DEL_SERVIDOR>:8274/
+
+- Ver que la aplicación responda y no haya errores en consola.
